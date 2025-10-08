@@ -1,0 +1,125 @@
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --primary: #eea034;
+  --text: #f1f5f9;
+  --low: #22c55e;
+  --moderate: #facc15;
+  --high: #e11818;
+}
+
+/* Same header as TakeQuestionnaire */
+.header {
+  position: fixed;  /* changed from sticky */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: var(--card);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* Push content below fixed header */
+.report-container {
+  margin-top: 80px; /* prevent overlap */
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.header .site-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.header .contact-btn {
+  background: var(--primary);
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.header .contact-btn:hover {
+  background: #df5b14;
+}
+
+.report-card {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  flex: 1 1 45%;
+  min-width: 270px;
+  box-sizing: border-box;
+}
+
+/* Risk Section */
+.risk-section {
+  text-align: center;
+}
+
+.risk-percentage {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 16px 0;
+  color: var(--primary);
+}
+
+.risk-level {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.risk-level.low { color: var(--low); }
+.risk-level.moderate { color: var(--moderate); }
+.risk-level.high { color: var(--high); }
+
+/* Suggestions */
+.suggestions-section ul {
+  padding-left: 20px;
+}
+.suggestions-section li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.modal .close-btn {
+  margin-top: 20px;
+  background: var(--primary);
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.modal .close-btn:hover {
+  background: #df5b14;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .report-container {
+    padding: 20px 10vw;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .report-card {
+    flex: 1 1 100%;
+    height: fit-content; /* shrink naturally */
+  }
+}
