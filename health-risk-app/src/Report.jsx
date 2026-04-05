@@ -77,9 +77,14 @@ function Report() {
       {/* Fixed Header */}
       <header className="header">
         <div className="site-name">HealthRiskPro</div>
-        <button className="contact-btn" onClick={() => setShowModal(true)}>
-          Contact
-        </button>
+        <div className="header-buttons">
+          <button className="contact-btn right" onClick={() => window.location.href = "/"}>
+              Again
+            </button>
+          <button className="contact-btn" onClick={() => setShowModal(true)}>
+            Contact
+          </button>
+        </div>
       </header>
 
       <div className="report-container">

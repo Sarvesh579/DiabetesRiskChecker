@@ -37,6 +37,11 @@
   box-sizing: border-box;
 }
 
+.header .header-buttons {
+  display: flex;
+  gap: 12px;
+}
+
 .header .site-name {
   font-size: 1.4rem;
   font-weight: 700;
